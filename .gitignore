@@ -1,0 +1,4 @@
+# Environment variables
+# Client
+client/.env
+client/.env.*
