@@ -37,17 +37,17 @@ export default function Home() {
     {
       title: "Hai chim sẻ",
       author: "...",
-      src: "../public/tranh1.jpeg"
+      src: "/tranh1.jpeg"
     },
     {
       title: "Chú chó",
       author: "...",
-      src: "../public/tranh2.jpeg"
+      src: "/tranh2.jpeg"
     },
     {
       title: "Neymar Jr",
       author: "...",
-      src: "../public/tranh3.jpeg"
+      src: "/tranh3.jpeg"
     }
   ];
 
@@ -200,7 +200,8 @@ export default function Home() {
             
             <div className="relative group shrink-0">
               <img 
-                src="public/avatar.jpg" 
+                loading="lazy"
+                src="/avatar.jpg" 
                 alt="Avatar Phúc Nguyên" 
                 className="w-40 h-40 md:w-64 md:h-64 rounded-full ring-4 ring-indigo-500 object-cover transition-transform duration-300 group-hover:scale-105 shadow-2xl shadow-indigo-500/20"
               />
@@ -273,7 +274,7 @@ export default function Home() {
                     className="relative group rounded-2xl overflow-hidden cursor-pointer aspect-[9/16] shadow-xl"
                     onClick={() => setActiveImage(art.src)}
                   >
-                    <img src={art.src} alt={art.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img loading="lazy" src={art.src} alt={art.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 md:p-6">
                       <h4 className="text-lg md:text-xl font-bold text-white leading-snug">{art.title}</h4>
                       <p className="text-indigo-300 text-xs md:text-sm mt-1.5 font-medium">{art.author}</p>
